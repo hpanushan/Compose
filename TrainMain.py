@@ -5,7 +5,11 @@ from ReadTextFile import readTextFile
 from RemoveStopWords import removeStopWords
 from TrainModel import trainModel
 
-def main(datasetLocation,modelLocation):
+def main(category):
+    # Attributes
+    datasetLocation = 'D:/OneDrive - Wavenet International (Pvt.) Ltd/Repos/Compose/{}/data/{}.txt'.format(category,category)
+    modelLocation = 'D:/OneDrive - Wavenet International (Pvt.) Ltd/Repos/Compose/{}/d2v.model'.format(category,category)
+
     # Reading the dataset
     phrasesList = readTextFile(datasetLocation)
 
@@ -16,9 +20,6 @@ def main(datasetLocation,modelLocation):
     trainModel(taggedData,modelLocation)
 
 if __name__ == '__main__':
-    # Attributes
-    category = 'activation'
-    datasetLocation = 'D:/OneDrive - Wavenet International (Pvt.) Ltd/Repos/Compose/{}/data/{}.txt'.format(category,category)
-    modelLocation = 'D:/OneDrive - Wavenet International (Pvt.) Ltd/Repos/Compose/{}/d2v.model'.format(category,category)
+    
+    main('activation')
 
-    main(datasetLocation,modelLocation)
