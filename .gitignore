@@ -1,5 +1,6 @@
-data/activation.txt
-data/booking.txt
-data/food_order.txt
-d2v.model
-
+activation/data/activation.txt
+booking/data/booking.txt
+ordering/data/food_order.txt
+activation/d2v.model
+activation/d2v.model
+avtivation/d2v.model

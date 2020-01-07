@@ -1,0 +1,37 @@
+I want to place an order
+Can I get a drip coffee, please?
+May I have a drip coffee, please?
+Do you have drip coffee?
+Can I order a drip coffee?
+Anything to drink?
+Anything to eat?
+I will have a drip coffee
+I would like a drip coffee
+Can I have a drip coffee
+We would like to order a drip coffee
+I want to place a pizza order
+Can I get a pizza, please?
+May I have a pizza, please?
+Do you have a pizza?
+Can I order a pizza?
+I will have a pizza
+I would like a pizza
+Can I have a pizza
+We would like to order a pizza
+I want to place a burger order
+Can I get a burger, please?
+May I have a burger, please?
+Do you have a burger?
+Can I order a burger?
+I will have a burger
+I would like a burger
+Can I have a burger
+We would like to order a burger
+I want to place a burger order
+Could we have another bottle of wine?
+Could we have some more bread?
+Could we have some more milk?
+Could we have a jug of tap water?
+Could we have some water?
+Do you have any specials?
+I would prefer red wine

@@ -1,7 +1,7 @@
 import multiprocessing
 from gensim.models.doc2vec import Doc2Vec
 
-def trainModel(taggedData):
+def trainModel(taggedData,modelLoaction):
     # Getting number of CPU core
     cpu_cores = multiprocessing.cpu_count()
 
@@ -9,6 +9,6 @@ def trainModel(taggedData):
     model = Doc2Vec(taggedData,vector_size=300,
 	            window=2,min_count=1,workers=cpu_cores,epochs=1000,dm=1)
     
-    model.save('d2v.model')                
+    model.save(modelLoaction)                
     print("Model Saved")
 
