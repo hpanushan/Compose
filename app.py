@@ -1,6 +1,7 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
 
+from CheckSimilarityValue import checkSimilarityValue
 from activation.ActivationMain import activationMain
 from booking.BookingMain import bookingMain
 from ordering.OrderingMain import orderingMain
@@ -20,7 +21,7 @@ class New(Resource):
             modifiedPhrase = phrase.replace('+',' ')
             # Run main function in activation
             similarPhrase,similarPhraseValue = activationMain(fileLocation,modifiedPhrase)
-            return {"similarPhrase":similarPhrase,"similarPhraseValue":similarPhraseValue}, 200
+            return {"similarPhrase":similarPhrase,"new?":checkSimilarityValue(similarPhraseValue)}, 200
         
         # Booking
         elif (category==2):
@@ -28,7 +29,7 @@ class New(Resource):
             modifiedPhrase = phrase.replace('+',' ')
             # Run main function in booking
             similarPhrase,similarPhraseValue = bookingMain(fileLocation,modifiedPhrase)
-            return {"similarPhrase":similarPhrase, "similarPhraseValue":similarPhraseValue}, 200
+            return {"similarPhrase":similarPhrase, "new?":checkSimilarityValue(similarPhraseValue)}, 200
 
         # Ordering
         elif (category==3):
@@ -36,7 +37,7 @@ class New(Resource):
             modifiedPhrase = phrase.replace('+',' ')
             # Run main function in ordering
             similarPhrase,similarPhraseValue = orderingMain(fileLocation,modifiedPhrase)
-            return {"similarPhrase":similarPhrase,"similarPhraseValue":similarPhraseValue}, 200
+            return {"similarPhrase":similarPhrase,"new?":checkSimilarityValue(similarPhraseValue)}, 200
 
         else:
             return {"out":"No category error"}, 404  

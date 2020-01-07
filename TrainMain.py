@@ -17,7 +17,8 @@ def main(datasetLocation,modelLocation):
 
 if __name__ == '__main__':
     # Attributes
-    datasetLocation = 'D:/OneDrive - Wavenet International (Pvt.) Ltd/Repos/Compose/booking/data/booking.txt'
-    modelLocation = 'D:/OneDrive - Wavenet International (Pvt.) Ltd/Repos/Compose/booking/d2v.model'
+    category = 'activation'
+    datasetLocation = 'D:/OneDrive - Wavenet International (Pvt.) Ltd/Repos/Compose/{}/data/{}.txt'.format(category,category)
+    modelLocation = 'D:/OneDrive - Wavenet International (Pvt.) Ltd/Repos/Compose/{}/d2v.model'.format(category,category)
 
     main(datasetLocation,modelLocation)
