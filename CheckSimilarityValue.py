@@ -7,3 +7,4 @@ def checkSimilarityValue(similarityValue):
 
     else:
         return False
+

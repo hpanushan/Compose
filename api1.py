@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask
 from flask_restful import Resource, Api
 
 from CheckSimilarityValue import checkSimilarityValue
@@ -40,11 +40,11 @@ class New(Resource):
             return {"similarPhrase":similarPhrase,"new?":checkSimilarityValue(similarPhraseValue)}, 200
 
         else:
-            return {"out":"No category error"}, 404  
-                
+            return {"Error message": "Category number is not defined"}, 404
+
 # Routes
 api.add_resource(New,'/new/<int:category>/<string:phrase>')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port='5000',debug=True)
 
